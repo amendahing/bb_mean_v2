@@ -1,0 +1,12 @@
+<br>
+<button [routerLink]="['']">Home</button>
+
+<h3>Details about {{pet_name}}</h3>
+
+<p>Pet Type: {{animal_type}}</p>
+<p>Description: {{description}}</p>
+<p>Skills: {{skills}}</p>
+<p>Likes: {{likes}}</p>
+
+<button (click)="addLikeButton()">Like this pet</button>
+<button (click)="delete()">Adopt this pet!</button>

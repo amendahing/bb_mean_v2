@@ -1,0 +1,20 @@
+<button [routerLink]="['add_pet']">Add a pet to the shelter!</button>
+
+
+<table style="width:100%; text-align: center; margin-top: 20px">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Actions Available</th>
+  </tr>
+
+  <tr *ngFor="let x of pets">
+    <td>{{x.name}}</td>
+    <td>{{x.animal_type}}</td>
+    <td>
+        <button (click)="details(x._id)">Details</button>
+        <button (click)="showEdit(x._id)">Edit</button>
+    </td>
+  </tr>
+
+</table>

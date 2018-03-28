@@ -1,0 +1,28 @@
+<p>Edit Pet Info</p>
+<div *ngIf="errors" id="error_message">
+    <p>{{ errors }}</p>
+</div>
+
+
+<form (submit)="submitEdit()">
+
+    <input type="text" name="name" placeholder="Pet Name" [(ngModel)]="name" />
+    <br>
+
+    <input type="text" name="animal_type" placeholder="Pet Type" [(ngModel)]="animal_type" />
+    <br>
+
+    <input type="text" name="description" placeholder="Description" [(ngModel)]="description" />
+    <br>
+
+    <h5>Skills:</h5>
+        <input type="text" name="skill_1" placeholder="Skill 1" [(ngModel)]="skill_1" />
+        <br>
+        <input type="text" name="skill_2" placeholder="Skill 2" [(ngModel)]="skill_2" />
+        <br>
+        <input type="text" name="skill_3" placeholder="Skill 3" [(ngModel)]="skill_3" />
+        <br>
+
+    <input type="submit" value="Edit Pet" />
+    <button [routerLink]="['/']">Cancel</button>
+</form>
